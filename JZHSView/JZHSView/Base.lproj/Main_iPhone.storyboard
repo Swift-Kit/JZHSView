@@ -87,6 +87,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="label1" destination="ZZW-0Y-ajR" id="kwJ-OT-Ref"/>
+                        <outlet property="label2" destination="J9q-Ib-oTm" id="98L-S7-YPA"/>
+                        <outlet property="label3" destination="chy-CD-7y5" id="PJ1-Pc-Lcu"/>
+                        <outlet property="label4" destination="E2f-Ge-vom" id="dcz-il-9Cw"/>
+                        <outlet property="label5" destination="UJd-7P-BGi" id="T8u-YA-2gz"/>
+                        <outlet property="label6" destination="Cf4-k5-3Hb" id="xHy-yQ-WFA"/>
                         <outlet property="titleLabel" destination="PyT-Ca-FI1" id="cyG-RY-pXB"/>
                     </connections>
                 </viewController>
