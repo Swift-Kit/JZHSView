@@ -29,15 +29,16 @@
     NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
     myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
     myAudioPlayer.numberOfLoops = 1;
+    
+    
     [self startMusic:self];
-    [self shakeLabel:self.titleLabel withMagnitude: 3];
+    [self shakeLabel:self.titleLabel withMagnitude: 3 withDuration:0.3];
     [self bounceLabel:self.label1 withMagnitude:5];
     [self zoomLabel:self.label2 withMagnitude:2];
     [self bounceLabel:self.label3 withMagnitude:7];
-    [self shakeLabel:self.label4 withMagnitude:4];
+    [self shakeLabel:self.label4 withMagnitude:4 withDuration:0.2];
     [self bounceLabel:self.label5 withMagnitude:3];
-    [self shakeLabel:self.label6 withMagnitude:7];
-
+    [self shakeLabel:self.label6 withMagnitude:7 withDuration:0.1];
 
 }
 
@@ -61,6 +62,7 @@
 
 - (void) shakeLabel: (UILabel *)labelToShake
       withMagnitude: (CGFloat) t
+       withDuration: (NSTimeInterval) d
 {
     if(!t)
         t = 2.0;
@@ -69,12 +71,12 @@
     
     labelToShake.transform = translateLeft;
     
-    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+    [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatCount:20.0];
         labelToShake.transform = translateRight;
     } completion:^(BOOL finished) {
         if (finished) {
-            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+            [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
                 labelToShake.transform = CGAffineTransformIdentity;
             } completion:NULL];
         }
@@ -107,6 +109,27 @@ withMagnitude: (CGFloat) t
 
 - (void) zoomLabel: (UILabel *)label
 withMagnitude: (CGFloat) t
+{
+    if(!t)
+        t= 2.0;
+    CGAffineTransform zoomOut = CGAffineTransformScale(CGAffineTransformIdentity, t, t);
+    CGAffineTransform zoomIn = CGAffineTransformScale(CGAffineTransformIdentity, 1/t, 1/t);
+    label.transform = zoomOut;
+    
+    [UIView animateKeyframesWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionAutoreverse| UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:20.0];
+        label.transform = zoomIn;
+    }completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                label.transform = CGAffineTransformIdentity;
+            } completion:NULL];
+        }
+    }];
+}
+
+- (void) randomLabel: (UILabel *)label
+     withMagnitude: (CGFloat) t
 {
     if(!t)
         t= 2.0;
