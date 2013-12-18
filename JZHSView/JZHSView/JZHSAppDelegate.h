@@ -7,14 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
-#include <AudioToolbox/AudioToolbox.h>
 
-@interface JZHSAppDelegate : UIResponder <UIApplicationDelegate>{
-    AVAudioPlayer *myAudioPlayer;
-}
-@property (nonatomic, retain) AVAudioPlayer *myAudioPlayer;
-
+@interface JZHSAppDelegate : UIResponder <UIApplicationDelegate>
 @property (strong, nonatomic) UIWindow *window;
 
 @end

@@ -7,20 +7,12 @@
 //
 
 #import "JZHSAppDelegate.h"
-#import <AVFoundation/AVFoundation.h>
-#include <AudioToolbox/AudioToolbox.h>
 
 
 @implementation JZHSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //start a background sound
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"HarlemShake" ofType: @"mp3"];
-    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
-    myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
-    myAudioPlayer.numberOfLoops = 1;
-    [myAudioPlayer play];
     return YES;
 }
 							
