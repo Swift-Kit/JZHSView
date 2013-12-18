@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1952FB641861808600A86D32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1952FB631861808600A86D32 /* Foundation.framework */; };
+		1952FB661861808600A86D32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1952FB651861808600A86D32 /* CoreGraphics.framework */; };
+		1952FB681861808600A86D32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1952FB671861808600A86D32 /* UIKit.framework */; };
+		1952FB6E1861808600A86D32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB6C1861808600A86D32 /* InfoPlist.strings */; };
+		1952FB701861808600A86D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB6F1861808600A86D32 /* main.m */; };
+		1952FB741861808600A86D32 /* JZHSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB731861808600A86D32 /* JZHSAppDelegate.m */; };
+		1952FB771861808600A86D32 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB751861808600A86D32 /* Main_iPhone.storyboard */; };
+		1952FB7A1861808600A86D32 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB781861808600A86D32 /* Main_iPad.storyboard */; };
+		1952FB7D1861808600A86D32 /* JZHSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB7C1861808600A86D32 /* JZHSViewController.m */; };
+		1952FB7F1861808600A86D32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB7E1861808600A86D32 /* Images.xcassets */; };
+		1952FB861861808600A86D32 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1952FB851861808600A86D32 /* XCTest.framework */; };
+		1952FB871861808600A86D32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1952FB631861808600A86D32 /* Foundation.framework */; };
+		1952FB881861808600A86D32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1952FB671861808600A86D32 /* UIKit.framework */; };
+		1952FB901861808600A86D32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB8E1861808600A86D32 /* InfoPlist.strings */; };
+		1952FB921861808600A86D32 /* JZHSViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB911861808600A86D32 /* JZHSViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1952FB891861808600A86D32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1952FB581861808600A86D32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1952FB5F1861808600A86D32;
+			remoteInfo = JZHSView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1952FB601861808600A86D32 /* JZHSView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZHSView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1952FB631861808600A86D32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1952FB651861808600A86D32 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1952FB671861808600A86D32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1952FB6B1861808600A86D32 /* JZHSView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JZHSView-Info.plist"; sourceTree = "<group>"; };
+		1952FB6D1861808600A86D32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1952FB6F1861808600A86D32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1952FB711861808600A86D32 /* JZHSView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JZHSView-Prefix.pch"; sourceTree = "<group>"; };
+		1952FB721861808600A86D32 /* JZHSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZHSAppDelegate.h; sourceTree = "<group>"; };
+		1952FB731861808600A86D32 /* JZHSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSAppDelegate.m; sourceTree = "<group>"; };
+		1952FB761861808600A86D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1952FB791861808600A86D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		1952FB7B1861808600A86D32 /* JZHSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZHSViewController.h; sourceTree = "<group>"; };
+		1952FB7C1861808600A86D32 /* JZHSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSViewController.m; sourceTree = "<group>"; };
+		1952FB7E1861808600A86D32 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1952FB841861808600A86D32 /* JZHSViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JZHSViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1952FB851861808600A86D32 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1952FB8D1861808600A86D32 /* JZHSViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JZHSViewTests-Info.plist"; sourceTree = "<group>"; };
+		1952FB8F1861808600A86D32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1952FB911861808600A86D32 /* JZHSViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1952FB5D1861808600A86D32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1952FB661861808600A86D32 /* CoreGraphics.framework in Frameworks */,
+				1952FB681861808600A86D32 /* UIKit.framework in Frameworks */,
+				1952FB641861808600A86D32 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1952FB811861808600A86D32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1952FB861861808600A86D32 /* XCTest.framework in Frameworks */,
+				1952FB881861808600A86D32 /* UIKit.framework in Frameworks */,
+				1952FB871861808600A86D32 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1952FB571861808600A86D32 = {
+			isa = PBXGroup;
+			children = (
+				1952FB691861808600A86D32 /* JZHSView */,
+				1952FB8B1861808600A86D32 /* JZHSViewTests */,
+				1952FB621861808600A86D32 /* Frameworks */,
+				1952FB611861808600A86D32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1952FB611861808600A86D32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1952FB601861808600A86D32 /* JZHSView.app */,
+				1952FB841861808600A86D32 /* JZHSViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1952FB621861808600A86D32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1952FB631861808600A86D32 /* Foundation.framework */,
+				1952FB651861808600A86D32 /* CoreGraphics.framework */,
+				1952FB671861808600A86D32 /* UIKit.framework */,
+				1952FB851861808600A86D32 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1952FB691861808600A86D32 /* JZHSView */ = {
+			isa = PBXGroup;
+			children = (
+				1952FB721861808600A86D32 /* JZHSAppDelegate.h */,
+				1952FB731861808600A86D32 /* JZHSAppDelegate.m */,
+				1952FB751861808600A86D32 /* Main_iPhone.storyboard */,
+				1952FB781861808600A86D32 /* Main_iPad.storyboard */,
+				1952FB7B1861808600A86D32 /* JZHSViewController.h */,
+				1952FB7C1861808600A86D32 /* JZHSViewController.m */,
+				1952FB7E1861808600A86D32 /* Images.xcassets */,
+				1952FB6A1861808600A86D32 /* Supporting Files */,
+			);
+			path = JZHSView;
+			sourceTree = "<group>";
+		};
+		1952FB6A1861808600A86D32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1952FB6B1861808600A86D32 /* JZHSView-Info.plist */,
+				1952FB6C1861808600A86D32 /* InfoPlist.strings */,
+				1952FB6F1861808600A86D32 /* main.m */,
+				1952FB711861808600A86D32 /* JZHSView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1952FB8B1861808600A86D32 /* JZHSViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				1952FB911861808600A86D32 /* JZHSViewTests.m */,
+				1952FB8C1861808600A86D32 /* Supporting Files */,
+			);
+			path = JZHSViewTests;
+			sourceTree = "<group>";
+		};
+		1952FB8C1861808600A86D32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1952FB8D1861808600A86D32 /* JZHSViewTests-Info.plist */,
+				1952FB8E1861808600A86D32 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1952FB5F1861808600A86D32 /* JZHSView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1952FB951861808600A86D32 /* Build configuration list for PBXNativeTarget "JZHSView" */;
+			buildPhases = (
+				1952FB5C1861808600A86D32 /* Sources */,
+				1952FB5D1861808600A86D32 /* Frameworks */,
+				1952FB5E1861808600A86D32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JZHSView;
+			productName = JZHSView;
+			productReference = 1952FB601861808600A86D32 /* JZHSView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1952FB831861808600A86D32 /* JZHSViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1952FB981861808600A86D32 /* Build configuration list for PBXNativeTarget "JZHSViewTests" */;
+			buildPhases = (
+				1952FB801861808600A86D32 /* Sources */,
+				1952FB811861808600A86D32 /* Frameworks */,
+				1952FB821861808600A86D32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1952FB8A1861808600A86D32 /* PBXTargetDependency */,
+			);
+			name = JZHSViewTests;
+			productName = JZHSViewTests;
+			productReference = 1952FB841861808600A86D32 /* JZHSViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1952FB581861808600A86D32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JZHS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = joeyzhou;
+				TargetAttributes = {
+					1952FB831861808600A86D32 = {
+						TestTargetID = 1952FB5F1861808600A86D32;
+					};
+				};
+			};
+			buildConfigurationList = 1952FB5B1861808600A86D32 /* Build configuration list for PBXProject "JZHSView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1952FB571861808600A86D32;
+			productRefGroup = 1952FB611861808600A86D32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1952FB5F1861808600A86D32 /* JZHSView */,
+				1952FB831861808600A86D32 /* JZHSViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1952FB5E1861808600A86D32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1952FB7A1861808600A86D32 /* Main_iPad.storyboard in Resources */,
+				1952FB7F1861808600A86D32 /* Images.xcassets in Resources */,
+				1952FB771861808600A86D32 /* Main_iPhone.storyboard in Resources */,
+				1952FB6E1861808600A86D32 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1952FB821861808600A86D32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1952FB901861808600A86D32 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1952FB5C1861808600A86D32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1952FB701861808600A86D32 /* main.m in Sources */,
+				1952FB7D1861808600A86D32 /* JZHSViewController.m in Sources */,
+				1952FB741861808600A86D32 /* JZHSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1952FB801861808600A86D32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1952FB921861808600A86D32 /* JZHSViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1952FB8A1861808600A86D32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1952FB5F1861808600A86D32 /* JZHSView */;
+			targetProxy = 1952FB891861808600A86D32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1952FB6C1861808600A86D32 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1952FB6D1861808600A86D32 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1952FB751861808600A86D32 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1952FB761861808600A86D32 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		1952FB781861808600A86D32 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1952FB791861808600A86D32 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		1952FB8E1861808600A86D32 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1952FB8F1861808600A86D32 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1952FB931861808600A86D32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1952FB941861808600A86D32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1952FB961861808600A86D32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JZHSView/JZHSView-Prefix.pch";
+				INFOPLIST_FILE = "JZHSView/JZHSView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1952FB971861808600A86D32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JZHSView/JZHSView-Prefix.pch";
+				INFOPLIST_FILE = "JZHSView/JZHSView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1952FB991861808600A86D32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JZHSView.app/JZHSView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JZHSView/JZHSView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JZHSViewTests/JZHSViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1952FB9A1861808600A86D32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JZHSView.app/JZHSView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JZHSView/JZHSView-Prefix.pch";
+				INFOPLIST_FILE = "JZHSViewTests/JZHSViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1952FB5B1861808600A86D32 /* Build configuration list for PBXProject "JZHSView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1952FB931861808600A86D32 /* Debug */,
+				1952FB941861808600A86D32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1952FB951861808600A86D32 /* Build configuration list for PBXNativeTarget "JZHSView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1952FB961861808600A86D32 /* Debug */,
+				1952FB971861808600A86D32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1952FB981861808600A86D32 /* Build configuration list for PBXNativeTarget "JZHSViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1952FB991861808600A86D32 /* Debug */,
+				1952FB9A1861808600A86D32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1952FB581861808600A86D32 /* Project object */;
+}
