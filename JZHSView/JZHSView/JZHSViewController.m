@@ -7,7 +7,6 @@
 //
 
 #import "JZHSViewController.h"
-
 @interface JZHSViewController ()
 
 @end
@@ -17,7 +16,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    //start a background sound
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"HarlemShake" ofType: @"mp3"];
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath:soundFilePath ];
+    myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:nil];
+    myAudioPlayer.numberOfLoops = 1;
+    [self startMusic:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +31,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pauseMusic
+{
+    NSLog(@"Pause music");
+
+        [myAudioPlayer stop];
+}
+
+- (IBAction)startMusic:(id)sender
+{
+    NSLog(@"Start music");
+    [myAudioPlayer play];
+}
 @end

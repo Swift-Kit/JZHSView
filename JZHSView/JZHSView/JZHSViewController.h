@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#include <AudioToolbox/AudioToolbox.h>
 
-@interface JZHSViewController : UIViewController
+@interface JZHSViewController : UIViewController {
+    AVAudioPlayer *myAudioPlayer;
+}
+@property (nonatomic, retain) AVAudioPlayer *myAudioPlayer;
 
 @end
