@@ -32,14 +32,14 @@
     
     
     [self startMusic:self];
-    [self shakeLabel:self.titleLabel withMagnitude: 3 withDuration:0.3];
-    [self bounceLabel:self.label1 withMagnitude:5];
-    [self zoomLabel:self.label2 withMagnitude:2];
-    [self bounceLabel:self.label3 withMagnitude:7];
-    [self shakeLabel:self.label4 withMagnitude:4 withDuration:0.2];
-    [self bounceLabel:self.label5 withMagnitude:3];
-    [self shakeLabel:self.label6 withMagnitude:7 withDuration:0.1];
-
+    [self shakeTitleLabel:self.titleLabel withMagnitude: 3 withDuration:0.3];
+    
+    double delayInSeconds = 14.8;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self everybodyHarlemShake];
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,6 +58,39 @@
 {
     NSLog(@"Start music");
     [myAudioPlayer play];
+}
+
+- (void) everybodyHarlemShake
+{
+    [self bounceLabel:self.label1 withMagnitude:5];
+    [self zoomLabel:self.label2 withMagnitude:2];
+    [self bounceLabel:self.label3 withMagnitude:7];
+    [self shakeLabel:self.label4 withMagnitude:4 withDuration:0.2];
+    [self bounceLabel:self.label5 withMagnitude:3];
+    [self shakeLabel:self.label6 withMagnitude:7 withDuration:0.1];
+}
+
+- (void) shakeTitleLabel: (UILabel *)labelToShake
+           withMagnitude: (CGFloat) t
+            withDuration: (NSTimeInterval) d
+{
+    if(!t)
+        t = 2.0;
+    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
+    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
+    
+    labelToShake.transform = translateLeft;
+    [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:30.67/d];
+        labelToShake.transform = translateRight;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                labelToShake.transform = CGAffineTransformIdentity;
+            } completion:NULL];
+        }
+    }];
+    
 }
 
 - (void) shakeLabel: (UILabel *)labelToShake
@@ -81,11 +114,11 @@
             } completion:NULL];
         }
     }];
-
+    
 }
 
 - (void) bounceLabel: (UILabel *)labelToShake
-withMagnitude: (CGFloat) t
+       withMagnitude: (CGFloat) t
 {
     if(!t)
         t = 2.0;
@@ -108,7 +141,7 @@ withMagnitude: (CGFloat) t
 }
 
 - (void) zoomLabel: (UILabel *)label
-withMagnitude: (CGFloat) t
+     withMagnitude: (CGFloat) t
 {
     if(!t)
         t= 2.0;
@@ -129,10 +162,8 @@ withMagnitude: (CGFloat) t
 }
 
 - (void) randomLabel: (UILabel *)label
-     withMagnitude: (CGFloat) t
 {
-    if(!t)
-        t= 2.0;
+    CGFloat t= 2.0;
     CGAffineTransform zoomOut = CGAffineTransformScale(CGAffineTransformIdentity, t, t);
     CGAffineTransform zoomIn = CGAffineTransformScale(CGAffineTransformIdentity, 1/t, 1/t);
     label.transform = zoomOut;
