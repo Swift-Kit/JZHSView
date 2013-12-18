@@ -13,7 +13,7 @@
 		1952FB6E1861808600A86D32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB6C1861808600A86D32 /* InfoPlist.strings */; };
 		1952FB701861808600A86D32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB6F1861808600A86D32 /* main.m */; };
 		1952FB741861808600A86D32 /* JZHSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB731861808600A86D32 /* JZHSAppDelegate.m */; };
-		1952FB771861808600A86D32 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB751861808600A86D32 /* Main_iPhone.storyboard */; };
+		1952FB771861808600A86D32 /* label.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB751861808600A86D32 /* label.storyboard */; };
 		1952FB7A1861808600A86D32 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB781861808600A86D32 /* Main_iPad.storyboard */; };
 		1952FB7D1861808600A86D32 /* JZHSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB7C1861808600A86D32 /* JZHSViewController.m */; };
 		1952FB7F1861808600A86D32 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB7E1861808600A86D32 /* Images.xcassets */; };
@@ -45,7 +45,7 @@
 		1952FB711861808600A86D32 /* JZHSView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JZHSView-Prefix.pch"; sourceTree = "<group>"; };
 		1952FB721861808600A86D32 /* JZHSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZHSAppDelegate.h; sourceTree = "<group>"; };
 		1952FB731861808600A86D32 /* JZHSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSAppDelegate.m; sourceTree = "<group>"; };
-		1952FB761861808600A86D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		1952FB761861808600A86D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/label.storyboard; sourceTree = "<group>"; };
 		1952FB791861808600A86D32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		1952FB7B1861808600A86D32 /* JZHSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JZHSViewController.h; sourceTree = "<group>"; };
 		1952FB7C1861808600A86D32 /* JZHSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSViewController.m; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			children = (
 				1952FB721861808600A86D32 /* JZHSAppDelegate.h */,
 				1952FB731861808600A86D32 /* JZHSAppDelegate.m */,
-				1952FB751861808600A86D32 /* Main_iPhone.storyboard */,
+				1952FB751861808600A86D32 /* label.storyboard */,
 				1952FB781861808600A86D32 /* Main_iPad.storyboard */,
 				1952FB7B1861808600A86D32 /* JZHSViewController.h */,
 				1952FB7C1861808600A86D32 /* JZHSViewController.m */,
@@ -234,7 +234,7 @@
 			files = (
 				1952FB7A1861808600A86D32 /* Main_iPad.storyboard in Resources */,
 				1952FB7F1861808600A86D32 /* Images.xcassets in Resources */,
-				1952FB771861808600A86D32 /* Main_iPhone.storyboard in Resources */,
+				1952FB771861808600A86D32 /* label.storyboard in Resources */,
 				1952FB6E1861808600A86D32 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +287,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		1952FB751861808600A86D32 /* Main_iPhone.storyboard */ = {
+		1952FB751861808600A86D32 /* label.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1952FB761861808600A86D32 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
+			name = label.storyboard;
 			sourceTree = "<group>";
 		};
 		1952FB781861808600A86D32 /* Main_iPad.storyboard */ = {
