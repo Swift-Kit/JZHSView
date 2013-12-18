@@ -53,7 +53,7 @@
     
     labelToShake.transform = translateLeft;
     
-    [UIView animateWithDuration:0.5x delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatCount:20.0];
         labelToShake.transform = translateRight;
     } completion:^(BOOL finished) {
