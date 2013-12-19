@@ -23,6 +23,7 @@
 		1952FB901861808600A86D32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1952FB8E1861808600A86D32 /* InfoPlist.strings */; };
 		1952FB921861808600A86D32 /* JZHSViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB911861808600A86D32 /* JZHSViewTests.m */; };
 		19FC1A6E186226CB00260CDF /* HarlemShake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19FC1A6C186226CB00260CDF /* HarlemShake.mp3 */; };
+		19FC1A7018627C3100260CDF /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FC1A6F18627C3100260CDF /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1952FB8F1861808600A86D32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1952FB911861808600A86D32 /* JZHSViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSViewTests.m; sourceTree = "<group>"; };
 		19FC1A6D186226CB00260CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/HarlemShake.mp3; sourceTree = "<group>"; };
+		19FC1A6F18627C3100260CDF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19FC1A7018627C3100260CDF /* GLKit.framework in Frameworks */,
 				1952FB661861808600A86D32 /* CoreGraphics.framework in Frameworks */,
 				1952FB681861808600A86D32 /* UIKit.framework in Frameworks */,
 				1952FB641861808600A86D32 /* Foundation.framework in Frameworks */,
@@ -105,6 +108,7 @@
 		1952FB621861808600A86D32 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19FC1A6F18627C3100260CDF /* GLKit.framework */,
 				1952FB631861808600A86D32 /* Foundation.framework */,
 				1952FB651861808600A86D32 /* CoreGraphics.framework */,
 				1952FB671861808600A86D32 /* UIKit.framework */,

@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 joeyzhou. All rights reserved.
 //
 
+#import <GLKit/GLKit.h>
 #import "JZHSViewController.h"
 @interface JZHSViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -38,7 +39,7 @@
     
     
     [self startMusic:self];
-//    [self zoomView:self.view];
+    //    [self zoomView:self.view];
     [self shakeTitleLabel:self.titleLabel withMagnitude: 5 withDuration:0.4];
     
     //    [self randomLabel:self.titleLabel];
@@ -79,8 +80,9 @@
     [self shakeLabel:self.label6 withMagnitude:7 withDuration:0.1];
     [self diagonalLabel2:self.label7 withMagnitude:9 withDuration:0.11];
     [self diagonalLabel:self.label8 withMagnitude:13 withDuration:0.22];
-    [self rotateLabel:self.label9 withMagnitude:9 withDuration:0.33 withAngle:180];
+    [self rotateLabel:self.label9 withMagnitude:9 withDuration:0.33 withAngle:155];
     [self rotateLabel:self.label10 withMagnitude:2 withDuration:0.3 withAngle:-270];
+//    [self squareLabel:self.label11 withMagnitude:3 withDuration:0.3];
     
 }
 
@@ -235,7 +237,7 @@
 {
     if(!t)
         t= 2.0;
-        
+    angle = GLKMathDegreesToRadians(angle);
     CGAffineTransform rotateLeft = CGAffineTransformRotate(CGAffineTransformIdentity, angle);
     CGAffineTransform rotateRight = CGAffineTransformRotate(CGAffineTransformIdentity, 0-angle);
     label.transform = rotateLeft;
@@ -251,13 +253,66 @@
     }];
 }
 
+//- (void)squareLabel: (UILabel*) label
+//      withMagnitude: (CGFloat) t
+//       withDuration: (NSTimeInterval) d
+//
+//{
+//    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
+////    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
+////    CGAffineTransform translateUp  = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.0, t);
+////    CGAffineTransform translateDown = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.0, -t);
+//    // rotate it right
+//    label.transform =CGAffineTransformRotate(CGAffineTransformIdentity, 0.25);
+//    //move it right
+//    [UIView animateKeyframesWithDuration:d delay:0.0 options:nil animations:^{
+//        label.transform = translateRight;
+//        
+//    }completion:^(BOOL finished) {
+//        if (finished) {
+//            label.transform =CGAffineTransformRotate(CGAffineTransformIdentity, 0.25);
+//            //move it right
+//            [UIView animateKeyframesWithDuration:d delay:0.0 options:nil animations:^{
+//                label.transform = translateRight;
+//                
+//            }completion:^(BOOL finished) {
+//                if (finished) {
+//                    label.transform =CGAffineTransformRotate(CGAffineTransformIdentity, 0.25);
+//                    //move it right
+//                    [UIView animateKeyframesWithDuration:d delay:0.0 options:nil animations:^{
+//                        label.transform = translateRight;
+//                        
+//                    }completion:^(BOOL finished) {
+//                        if (finished) {
+//                            label.transform =CGAffineTransformRotate(CGAffineTransformIdentity, 0.25);
+//                            //move it right
+//                            [UIView animateKeyframesWithDuration:d delay:0.0 options:nil animations:^{
+//                                label.transform = translateRight;
+//                                
+//                            }completion:^(BOOL finished) {
+//                                if (finished) {
+//                                    NSLog(@"end of rotation");
+//                                    
+//                                }
+//                            }];
+//                            
+//                        }
+//                    }];
+//                    
+//                }
+//            }];
+//            
+//        }
+//    }];
+//}
+
 //- (void)zoomView:(UIView *)view
 //{
 //    CGFloat t = 2.0;
 //    CGAffineTransform zoomOut = CGAffineTransformScale(CGAffineTransformIdentity, t, t);
 //    CGAffineTransform zoomIn = CGAffineTransformScale(CGAffineTransformIdentity, 1/t, 1/t);
 ////    view.transform = zoomIn;
-//    
+//
 //    [UIView animateWithDuration:1 delay:3 options:UIViewAnimationOptionRepeat animations:^{
 //        [UIView setAnimationRepeatCount:1];
 //        view.transform = zoomOut;
