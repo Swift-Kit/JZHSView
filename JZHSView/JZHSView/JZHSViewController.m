@@ -16,6 +16,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *label5;
 @property (weak, nonatomic) IBOutlet UILabel *label6;
 @property (weak, nonatomic) IBOutlet UILabel *label7;
+@property (weak, nonatomic) IBOutlet UILabel *label8;
+@property (weak, nonatomic) IBOutlet UILabel *label9;
+@property (weak, nonatomic) IBOutlet UILabel *label10;
+@property (weak, nonatomic) IBOutlet UILabel *label11;
+@property (weak, nonatomic) IBOutlet UILabel *label12;
 
 @end
 
@@ -33,9 +38,9 @@
     
     
     [self startMusic:self];
-    [self shakeTitleLabel:self.titleLabel withMagnitude: 3 withDuration:0.3];
+    [self shakeTitleLabel:self.titleLabel withMagnitude: 5 withDuration:0.4];
     
-//    [self randomLabel:self.titleLabel];
+    //    [self randomLabel:self.titleLabel];
     
     double delayInSeconds = 14.8;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -71,7 +76,11 @@
     [self shakeLabel:self.label4 withMagnitude:4 withDuration:0.2];
     [self bounceLabel:self.label5 withMagnitude:3 withDuration:0.15];
     [self shakeLabel:self.label6 withMagnitude:7 withDuration:0.1];
-    [self diagonalLabel:self.label7 withMagnitude:9 withDuration:0.11];
+    [self diagonalLabel2:self.label7 withMagnitude:9 withDuration:0.11];
+    [self diagonalLabel:self.label8 withMagnitude:13 withDuration:0.22];
+    [self rotateLabel:self.label9 withMagnitude:9 withDuration:0.33 withAngle:180];
+    [self rotateLabel:self.label10 withMagnitude:2 withDuration:0.3 withAngle:-270];
+    
 }
 
 - (void) shakeTitleLabel: (UILabel *)labelToShake
@@ -183,6 +192,55 @@
     [UIView animateKeyframesWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse| UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatCount:15.87/d];
         label.transform = random2;
+    }completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                label.transform = CGAffineTransformIdentity;
+            } completion:NULL];
+        }
+    }];
+}
+
+- (void) diagonalLabel2: (UILabel *)label
+          withMagnitude: (CGFloat) t
+           withDuration: (NSTimeInterval) d
+{
+    if(!t)
+        t= 2.0;
+    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
+    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
+    CGAffineTransform translateUp  = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.0, t);
+    CGAffineTransform translateDown = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.0, -t);
+    CGAffineTransform random1 = CGAffineTransformConcat(translateRight, translateUp);
+    CGAffineTransform random2 = CGAffineTransformConcat(translateLeft, translateDown);
+    label.transform = random2;
+    
+    [UIView animateKeyframesWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse| UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:15.87/d];
+        label.transform = random1;
+    }completion:^(BOOL finished) {
+        if (finished) {
+            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                label.transform = CGAffineTransformIdentity;
+            } completion:NULL];
+        }
+    }];
+}
+
+- (void) rotateLabel: (UILabel *)label
+       withMagnitude: (CGFloat) t
+        withDuration: (NSTimeInterval) d
+           withAngle: (CGFloat)angle
+{
+    if(!t)
+        t= 2.0;
+        
+    CGAffineTransform rotateLeft = CGAffineTransformRotate(CGAffineTransformIdentity, angle);
+    CGAffineTransform rotateRight = CGAffineTransformRotate(CGAffineTransformIdentity, 0-angle);
+    label.transform = rotateLeft;
+    [UIView animateKeyframesWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse| UIViewAnimationOptionRepeat animations:^{
+        [UIView setAnimationRepeatCount:15.87/d];
+        label.transform = rotateRight;
     }completion:^(BOOL finished) {
         if (finished) {
             [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{

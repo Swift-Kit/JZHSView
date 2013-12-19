@@ -84,18 +84,48 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rt8-Tr-cv6">
-                                <rect key="frame" x="20" y="159" width="122" height="116"/>
+                                <rect key="frame" x="21" y="361" width="122" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oS-gV-zNL">
-                                <rect key="frame" x="160" y="159" width="122" height="116"/>
+                                <rect key="frame" x="161" y="361" width="122" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HARLEM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-8i-Lah">
-                                <rect key="frame" x="29" y="311" width="70" height="21"/>
+                                <rect key="frame" x="34" y="161" width="70" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHAKE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL3-0O-NZh">
+                                <rect key="frame" x="208" y="161" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MUSIC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXh-ho-eFI">
+                                <rect key="frame" x="124" y="161" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHAKE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1c-En-VAl">
+                                <rect key="frame" x="39" y="190" width="57" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MUSIC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-0S-skz">
+                                <rect key="frame" x="123" y="190" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HARLEM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppp-s0-yUB">
+                                <rect key="frame" x="208" y="190" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -103,12 +133,17 @@
                     </view>
                     <connections>
                         <outlet property="label1" destination="ZZW-0Y-ajR" id="kwJ-OT-Ref"/>
+                        <outlet property="label10" destination="i1c-En-VAl" id="DX5-Mh-0oE"/>
+                        <outlet property="label11" destination="sbi-0S-skz" id="xMi-v1-fZe"/>
+                        <outlet property="label12" destination="Ppp-s0-yUB" id="haz-vl-LNg"/>
                         <outlet property="label2" destination="J9q-Ib-oTm" id="98L-S7-YPA"/>
                         <outlet property="label3" destination="chy-CD-7y5" id="PJ1-Pc-Lcu"/>
                         <outlet property="label4" destination="E2f-Ge-vom" id="dcz-il-9Cw"/>
                         <outlet property="label5" destination="UJd-7P-BGi" id="T8u-YA-2gz"/>
                         <outlet property="label6" destination="Cf4-k5-3Hb" id="xHy-yQ-WFA"/>
                         <outlet property="label7" destination="EdF-8i-Lah" id="4aD-A8-85r"/>
+                        <outlet property="label8" destination="rL3-0O-NZh" id="bcJ-ff-QVz"/>
+                        <outlet property="label9" destination="TXh-ho-eFI" id="uLU-rf-pml"/>
                         <outlet property="titleLabel" destination="PyT-Ca-FI1" id="cyG-RY-pXB"/>
                     </connections>
                 </viewController>
