@@ -145,6 +145,7 @@
                         <outlet property="label8" destination="rL3-0O-NZh" id="bcJ-ff-QVz"/>
                         <outlet property="label9" destination="TXh-ho-eFI" id="uLU-rf-pml"/>
                         <outlet property="titleLabel" destination="PyT-Ca-FI1" id="cyG-RY-pXB"/>
+                        <outlet property="view" destination="kh9-bI-dsS" id="mHO-hC-cjc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

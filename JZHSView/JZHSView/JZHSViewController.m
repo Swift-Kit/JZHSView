@@ -38,6 +38,7 @@
     
     
     [self startMusic:self];
+//    [self zoomView:self.view];
     [self shakeTitleLabel:self.titleLabel withMagnitude: 5 withDuration:0.4];
     
     //    [self randomLabel:self.titleLabel];
@@ -226,7 +227,7 @@
         }
     }];
 }
-
+//TODO: fix angle, it's supposed to be in radian
 - (void) rotateLabel: (UILabel *)label
        withMagnitude: (CGFloat) t
         withDuration: (NSTimeInterval) d
@@ -250,23 +251,22 @@
     }];
 }
 
-- (void)shakeView:(UIView *)viewToShake
-{
-    CGFloat t = 2.0;
-    CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
-    CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
-    
-    viewToShake.transform = translateLeft;
-    
-    [UIView animateWithDuration:0.07 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        [UIView setAnimationRepeatCount:2.0];
-        viewToShake.transform = translateRight;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:0.05 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                viewToShake.transform = CGAffineTransformIdentity;
-            } completion:NULL];
-        }
-    }];
-}
+//- (void)zoomView:(UIView *)view
+//{
+//    CGFloat t = 2.0;
+//    CGAffineTransform zoomOut = CGAffineTransformScale(CGAffineTransformIdentity, t, t);
+//    CGAffineTransform zoomIn = CGAffineTransformScale(CGAffineTransformIdentity, 1/t, 1/t);
+////    view.transform = zoomIn;
+//    
+//    [UIView animateWithDuration:1 delay:3 options:UIViewAnimationOptionRepeat animations:^{
+//        [UIView setAnimationRepeatCount:1];
+//        view.transform = zoomOut;
+//    } completion:^(BOOL finished) {
+//        if (finished) {
+//            [UIView animateWithDuration:1 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+//                view.transform = CGAffineTransformIdentity;
+//            } completion:NULL];
+//        }
+//    }];
+//}
 @end
