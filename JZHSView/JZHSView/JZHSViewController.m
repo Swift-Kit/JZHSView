@@ -98,10 +98,10 @@
     [self zoomView:self.image2 withMagnitude:1.2 withDuration:0.02];
     [self diagonalView:self.image3 withMagnitude:1.1 withDuration:0.29];
     [self bounceView:self.image4 withMagnitude:0.7 withDuration:0.1];
-
+    
 }
 
-- (void) shakeTitleLabel: (UILabel *)labelToShake
+- (void) shakeTitleLabel: (UILabel *)label
            withMagnitude: (CGFloat) t
             withDuration: (NSTimeInterval) d
 {
@@ -110,21 +110,21 @@
     CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
     CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
     
-    labelToShake.transform = translateLeft;
+    label.transform = translateLeft;
     [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatCount:30.67/d/2];
-        labelToShake.transform = translateRight;
+        label.transform = translateRight;
     } completion:^(BOOL finished) {
         if (finished) {
             [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                labelToShake.transform = CGAffineTransformIdentity;
+                label.transform = CGAffineTransformIdentity;
             } completion:NULL];
         }
     }];
     
 }
 
-- (void) shakeLabel: (UILabel *)labelToShake
+- (void) shakeLabel: (UILabel *)label
       withMagnitude: (CGFloat) t
        withDuration: (NSTimeInterval) d
 {
@@ -133,22 +133,22 @@
     CGAffineTransform translateRight  = CGAffineTransformTranslate(CGAffineTransformIdentity, t, 0.0);
     CGAffineTransform translateLeft = CGAffineTransformTranslate(CGAffineTransformIdentity, -t, 0.0);
     
-    labelToShake.transform = translateLeft;
+    label.transform = translateLeft;
     
     [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatCount:15.87/d/2];
-        labelToShake.transform = translateRight;
+        label.transform = translateRight;
     } completion:^(BOOL finished) {
         if (finished) {
             [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                labelToShake.transform = CGAffineTransformIdentity;
+                label.transform = CGAffineTransformIdentity;
             } completion:NULL];
         }
     }];
     
 }
 
-- (void) bounceLabel: (UILabel *)labelToShake
+- (void) bounceLabel: (UILabel *)label
        withMagnitude: (CGFloat) t
         withDuration: (NSTimeInterval) d
 {
@@ -157,15 +157,15 @@
     CGAffineTransform translateUp  = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.0, t);
     CGAffineTransform translateDown = CGAffineTransformTranslate(CGAffineTransformIdentity, 0.0, -t);
     
-    labelToShake.transform = translateUp;
+    label.transform = translateUp;
     
     [UIView animateWithDuration:d delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
         [UIView setAnimationRepeatCount:15.87/d/2];
-        labelToShake.transform = translateDown;
+        label.transform = translateDown;
     } completion:^(BOOL finished) {
         if (finished) {
             [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                labelToShake.transform = CGAffineTransformIdentity;
+                label.transform = CGAffineTransformIdentity;
             } completion:NULL];
         }
     }];
@@ -324,20 +324,20 @@
     
     [UIView animateWithDuration:d delay:0.0 options:
      UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-        [UIView setAnimationRepeatCount:15.87/d/2];
-        view.transform = zoomOut;
-    } completion:^(BOOL finished) {
-        if (finished) {
-            [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
-                view.transform = CGAffineTransformIdentity;
-            } completion:NULL];
-        }
-    }];
+         [UIView setAnimationRepeatCount:15.87/d/2];
+         view.transform = zoomOut;
+     } completion:^(BOOL finished) {
+         if (finished) {
+             [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+                 view.transform = CGAffineTransformIdentity;
+             } completion:NULL];
+         }
+     }];
 }
 
 - (void) diagonalView: (UIView *)view
-          withMagnitude: (CGFloat) t
-           withDuration: (NSTimeInterval) d
+        withMagnitude: (CGFloat) t
+         withDuration: (NSTimeInterval) d
 {
     if(!t)
         t= 2.0;
@@ -362,8 +362,8 @@
 }
 
 - (void) bounceView: (UIView *)view
-       withMagnitude: (CGFloat) t
-        withDuration: (NSTimeInterval) d
+      withMagnitude: (CGFloat) t
+       withDuration: (NSTimeInterval) d
 {
     if(!t)
         t = 2.0;
