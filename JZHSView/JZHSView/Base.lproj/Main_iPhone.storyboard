@@ -83,12 +83,12 @@
                                     <action selector="startMusic:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F8j-KQ-HL6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rt8-Tr-cv6">
-                                <rect key="frame" x="21" y="361" width="122" height="116"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="horse.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rt8-Tr-cv6">
+                                <rect key="frame" x="20" y="219" width="122" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4oS-gV-zNL">
-                                <rect key="frame" x="161" y="361" width="122" height="116"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stormTrooper.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4oS-gV-zNL">
+                                <rect key="frame" x="160" y="219" width="122" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HARLEM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdF-8i-Lah">
@@ -116,8 +116,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MUSIC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-0S-skz">
-                                <rect key="frame" x="123" y="190" width="56" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HORSE?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-0S-skz">
+                                <rect key="frame" x="123" y="190" width="69" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -128,10 +128,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="helmet.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OAQ-fS-BM5">
+                                <rect key="frame" x="20" y="351" width="122" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="predator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="M7p-bq-X2K">
+                                <rect key="frame" x="164" y="351" width="114" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="image1" destination="rt8-Tr-cv6" id="JRx-yi-4xg"/>
+                        <outlet property="image2" destination="4oS-gV-zNL" id="DnE-47-Jj6"/>
+                        <outlet property="image3" destination="OAQ-fS-BM5" id="UBW-gy-Ea5"/>
+                        <outlet property="image4" destination="M7p-bq-X2K" id="6IH-Zs-jjV"/>
                         <outlet property="label1" destination="ZZW-0Y-ajR" id="kwJ-OT-Ref"/>
                         <outlet property="label10" destination="i1c-En-VAl" id="DX5-Mh-0oE"/>
                         <outlet property="label11" destination="sbi-0S-skz" id="xMi-v1-fZe"/>
@@ -152,6 +164,12 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="helmet.jpg" width="613" height="600"/>
+        <image name="horse.jpg" width="853" height="737"/>
+        <image name="predator.jpg" width="600" height="450"/>
+        <image name="stormTrooper.jpg" width="1734" height="1859"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
