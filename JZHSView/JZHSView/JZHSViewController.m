@@ -64,8 +64,7 @@
 
 - (IBAction)pauseMusic
 {
-    NSLog(@"Pause music");
-    [myAudioPlayer stop];
+    NSLog(@"JKJKJKJKJKK CANT STOP THE HARLEM SHAKE");
 }
 
 - (IBAction)startMusic:(id)sender
@@ -94,7 +93,7 @@
     self.image3.hidden = false;
     self.image4.hidden = false;
     
-    [self zoomView:self.image1 withMagnitude:0.3 withDuration:0.2];
+    [self zoomView:self.image1 withMagnitude:0.55 withDuration:0.2];
     [self zoomView:self.image2 withMagnitude:1.2 withDuration:0.02];
     [self diagonalView:self.image3 withMagnitude:1.1 withDuration:0.29];
     [self bounceView:self.image4 withMagnitude:0.7 withDuration:0.1];
