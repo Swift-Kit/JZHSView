@@ -24,6 +24,10 @@
 		1952FB921861808600A86D32 /* JZHSViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1952FB911861808600A86D32 /* JZHSViewTests.m */; };
 		19FC1A6E186226CB00260CDF /* HarlemShake.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19FC1A6C186226CB00260CDF /* HarlemShake.mp3 */; };
 		19FC1A7018627C3100260CDF /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FC1A6F18627C3100260CDF /* GLKit.framework */; };
+		19FC1A731863C7E500260CDF /* horse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19FC1A711863C7E500260CDF /* horse.jpg */; };
+		19FC1A761863C95800260CDF /* stormTrooper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19FC1A741863C95800260CDF /* stormTrooper.jpg */; };
+		19FC1A7B1863C9DA00260CDF /* helmet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19FC1A771863C9DA00260CDF /* helmet.jpg */; };
+		19FC1A7C1863C9DA00260CDF /* predator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 19FC1A791863C9DA00260CDF /* predator.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		1952FB911861808600A86D32 /* JZHSViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JZHSViewTests.m; sourceTree = "<group>"; };
 		19FC1A6D186226CB00260CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Base; path = Base.lproj/HarlemShake.mp3; sourceTree = "<group>"; };
 		19FC1A6F18627C3100260CDF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		19FC1A721863C7E500260CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/horse.jpg; sourceTree = "<group>"; };
+		19FC1A751863C95800260CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/stormTrooper.jpg; sourceTree = "<group>"; };
+		19FC1A781863C9DA00260CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/helmet.jpg; sourceTree = "<group>"; };
+		19FC1A7A1863C9DA00260CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = Base.lproj/predator.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +171,12 @@
 		19FC1A6B1862260800260CDF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				19FC1A741863C95800260CDF /* stormTrooper.jpg */,
+				19FC1A711863C7E500260CDF /* horse.jpg */,
 				19FC1A6C186226CB00260CDF /* HarlemShake.mp3 */,
 				1952FB751861808600A86D32 /* Main_iPhone.storyboard */,
+				19FC1A771863C9DA00260CDF /* helmet.jpg */,
+				19FC1A791863C9DA00260CDF /* predator.jpg */,
 				1952FB781861808600A86D32 /* Main_iPad.storyboard */,
 			);
 			name = Resources;
@@ -247,7 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19FC1A7B1863C9DA00260CDF /* helmet.jpg in Resources */,
 				1952FB7A1861808600A86D32 /* Main_iPad.storyboard in Resources */,
+				19FC1A761863C95800260CDF /* stormTrooper.jpg in Resources */,
+				19FC1A7C1863C9DA00260CDF /* predator.jpg in Resources */,
+				19FC1A731863C7E500260CDF /* horse.jpg in Resources */,
 				1952FB7F1861808600A86D32 /* Images.xcassets in Resources */,
 				1952FB771861808600A86D32 /* Main_iPhone.storyboard in Resources */,
 				1952FB6E1861808600A86D32 /* InfoPlist.strings in Resources */,
@@ -333,6 +349,38 @@
 				19FC1A6D186226CB00260CDF /* Base */,
 			);
 			name = HarlemShake.mp3;
+			sourceTree = "<group>";
+		};
+		19FC1A711863C7E500260CDF /* horse.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FC1A721863C7E500260CDF /* Base */,
+			);
+			name = horse.jpg;
+			sourceTree = "<group>";
+		};
+		19FC1A741863C95800260CDF /* stormTrooper.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FC1A751863C95800260CDF /* Base */,
+			);
+			name = stormTrooper.jpg;
+			sourceTree = "<group>";
+		};
+		19FC1A771863C9DA00260CDF /* helmet.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FC1A781863C9DA00260CDF /* Base */,
+			);
+			name = helmet.jpg;
+			sourceTree = "<group>";
+		};
+		19FC1A791863C9DA00260CDF /* predator.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19FC1A7A1863C9DA00260CDF /* Base */,
+			);
+			name = predator.jpg;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
